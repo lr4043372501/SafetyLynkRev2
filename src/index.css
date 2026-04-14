@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background-color: #fcf9f1;
+  color: #1c1c17;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.glass {
+  background: rgba(252, 249, 241, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.glass-panel {
+  background: rgba(252, 249, 241, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #00694c 0%, #008560 100%);
+}
+
+.editorial-gradient {
+  background: linear-gradient(135deg, #00694c 0%, #008560 100%);
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, #00694c 0%, #008560 100%);
+}
+
+.editorial-shadow {
+  box-shadow: 0 32px 64px -12px rgba(28, 28, 23, 0.06);
+}
+
+/* Animation Styles */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-child > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-child.active > * {
+  opacity: 1;
+  transform: translateY(0);
+}
